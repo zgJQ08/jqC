@@ -1,4 +1,4 @@
-/* 特別注意 "1.0" 才能讓他知道是float */
+/* 特別注意 "1.0" 才能讓他知道是float ， 然後要用1開始!! */
 #include <stdio.h>
 	int main(){
     	int N;
