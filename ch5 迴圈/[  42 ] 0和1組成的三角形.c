@@ -1,4 +1,4 @@
-/* for用1~N方便判斷，基偶數分開處理 */
+/* for用1~N方便判斷，基偶數分開處理  */
 #include <stdio.h>
 	int main(){
     	int N;
