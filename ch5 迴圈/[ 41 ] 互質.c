@@ -1,4 +1,4 @@
-/* same as [ 40 ] */
+/* 跟[40]題類似 */
 #include <stdio.h>
 	int main(){
     	int a,b ;
