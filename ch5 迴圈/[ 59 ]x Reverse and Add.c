@@ -1,3 +1,4 @@
+/* 這題超麻煩，反正記得要用到limits中的INI_MAX，還有do...while(1) ，找到回文在break */
 #include <stdio.h>
 #include <limits.h> // 需要用到 INT_MAX
 
