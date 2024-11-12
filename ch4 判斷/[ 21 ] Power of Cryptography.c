@@ -1,4 +1,4 @@
-/* 1.這題用double ，exp(log(p)/n) */
+/* 這題用double ，exp(log(p)/n) */
 #include <stdio.h>
 #include <math.h>
 
