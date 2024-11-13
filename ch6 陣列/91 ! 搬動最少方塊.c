@@ -1,3 +1,4 @@
+/* 差的總和/2 然後輸出記得在換行*/
 #include <stdio.h>
 	int main(){
 	    int times = 1 ;
