@@ -1,34 +1,44 @@
+/* 把數字去用2~9試著分解，然後反過來輸出 */
 #include <stdio.h>
 
-int main() {
-    int T, N;
-    if (scanf("%d", &T) != 1) return 1; // 讀取測試案例數量
-    while (T--) {
-        if (scanf("%d", &N) != 1) return 1; // 讀取每個測試案例的 N
-        if (N == 1) {
-            printf("1\n");
-            continue;
+int main()
+{
+    int test;
+    long long num;
+    scanf("%d", &test);
+    while(test--)
+    {
+        scanf("%lld", &num);
+      
+        int arr[10000];
+        int n = 0;
+        
+        if(num == 1)
+        {
+            printf("1");
         }
-        int digit[10] = {0}; // 用於存儲每個數字的出現次數
-        int i;
-        for (i = 9; i > 1; i--) {
-            while (N % i == 0) {
-                digit[i]++;
-                N /= i;
-            }
-            if (N == 1) break;
-        }
-        if (N == 1) {
-            long long ans = 0;
-            for (i = 2; i <= 9; i++) {
-                while (digit[i]-- > 0) {
-                    ans = ans * 10 + i;
+        else
+        {
+            // 嘗試從 9 到 2 進行因數分解
+            for(int i = 9 ; i > 1 ; i--)
+            {
+                while(num % i == 0 && num >= i)
+                {
+                    num /= i;
+                    arr[n] = i;
+                    n++;
                 }
             }
-            printf("%lld\n", ans);
-        } else {
-            printf("-1\n");
+            
+            if(num == 1)
+            {
+                for(int i = n-1 ; i >= 0 ; i--)
+                {
+                    printf("%d", arr[i]);
+                }
+            }
+            else printf("-1");
         }
+        printf("\n");
     }
-    return 0;
 }
