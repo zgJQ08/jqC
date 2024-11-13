@@ -10,7 +10,7 @@
           }
           if(Nums>0){
           	Se += Nums %10;
-            Nums /= 10;
+            	Nums /= 10;
           }
           
         
