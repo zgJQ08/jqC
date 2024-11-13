@@ -1,4 +1,4 @@
-
+/* D深度 第I個掉落的球 ... 難以理解... */
 #include <stdio.h>
     int main(){
         int times;
