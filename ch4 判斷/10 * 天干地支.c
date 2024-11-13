@@ -1,5 +1,6 @@
+/* 姬芭多東西要記 */
 #include <stdio.h>
-#include <locale.h> // loca"l"e
+#include <locale.h> 
 
 int main(){
   	setlocale(LC_ALL,""); //
