@@ -13,7 +13,7 @@ int main(){
         int temp = i ;
         int step = 1 ;
           while( temp != 1){
-          		if(temp%2) temp = temp * 3 +1 ;
+          	if(temp%2) temp = temp * 3 +1 ;
             	else temp /=2 ;
             	step ++ ;
           }
