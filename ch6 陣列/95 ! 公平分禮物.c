@@ -8,7 +8,7 @@
         }
       int sum=0 ;
       	for(int i=0 ; i<gf ; i++){
-        	int temp = i ;
+        	int temp = G[i] ;
           	int N=0 ;
           		if(G[i] != -1){
                 	for(int j=0 ; j<gf ; j++){
