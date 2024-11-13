@@ -1,3 +1,4 @@
+/* 弄一個t去接餘數，記得重置 */
 #include <stdio.h>
 	int main(){
     	int times;
