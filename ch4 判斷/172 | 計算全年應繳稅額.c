@@ -1,4 +1,4 @@
-/* %前面的空格還是:沒弄好就沒了 */
+/* %前面要：+空格 */
 #include<stdio.h>
 int main() {
 	double a = 0;
