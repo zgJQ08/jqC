@@ -1,3 +1,4 @@
+/* dx ， dy 然後注意不要超出>=0 <4 */
 #include <stdio.h>
 	int main(){
     	int B[4][4] , C[4][4] ;
