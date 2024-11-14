@@ -16,3 +16,4 @@ int main(){
         printf("%.6lf %.6lf\n", arc, chord);
     }
 }
+
