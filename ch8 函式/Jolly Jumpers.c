@@ -1,3 +1,4 @@
+/*這題還好，用新的矩陣來判斷*/
 #include <stdio.h>
 
 void Jolly_Jumpers(int Array[], int size) {
