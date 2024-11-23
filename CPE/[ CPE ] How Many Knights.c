@@ -1,3 +1,4 @@
+/* 騎士只會L形攻擊 */
 #include <stdio.h>
 
 int main() {
