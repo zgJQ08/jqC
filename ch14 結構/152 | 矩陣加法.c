@@ -44,7 +44,13 @@ int main(){
             }
             printf("\n");
         }
+        free(M3->data); //
+        free(M3); //
     }
+    free(M1->data); //
+    free(M2->data); //
+    free(M1); //
+    free(M2); //
         
         
         
