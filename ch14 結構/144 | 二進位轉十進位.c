@@ -6,12 +6,13 @@
 int getDecimalValue(struct ListNode* head)
 {
    int result = 0;
-    while (head != NULL) {
-        result = result * 2 + head->val; // 每次將數字進位並加上當前位元
-        head = head->next;
+    while (head != NULL) { //串列最後一個會是null
+        result = result * 2 + head->val; //當前結果進位+現在的1/0
+        head = head->next; //指向下一個數字
     }
     return result;
 }
+
 
 
 /* 
