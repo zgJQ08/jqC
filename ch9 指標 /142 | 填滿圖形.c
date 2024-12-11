@@ -9,7 +9,7 @@ void floodFill(int** image, int imageSize, int sr, int sc, int newColor) {
     void fill(int x, int y) {
         if (x < 0 || x >= imageSize || y < 0 || y >= imageSize || image[x][y] != oC) return; //超出
 
-        image[x][y] = newColor; /
+        image[x][y] = newColor; 
 
         //擴散
         fill(x - 1, y);
