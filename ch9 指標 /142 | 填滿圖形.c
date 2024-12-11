@@ -3,9 +3,6 @@
  
 void floodFill(int** image, int imageSize, int sr, int sc, int newColor) {
     int oC = image[sr][sc];
-    if (oC == newColor) return; // 起始
-
-
     void fill(int x, int y) {
         if (x < 0 || x >= imageSize || y < 0 || y >= imageSize || image[x][y] != oC) return; //超出
 
