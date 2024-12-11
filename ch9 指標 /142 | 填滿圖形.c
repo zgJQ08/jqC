@@ -3,13 +3,13 @@
  
 void floodFill(int** image, int imageSize, int sr, int sc, int newColor) {
     int oC = image[sr][sc];
-    if (oC == newColor) return; // 起始位置是目標顏色
+    if (oC == newColor) return; // 起始
 
 
     void fill(int x, int y) {
-        if (x < 0 || x >= imageSize || y < 0 || y >= imageSize || image[x][y] != oC) return; //不符合換顏色規則
+        if (x < 0 || x >= imageSize || y < 0 || y >= imageSize || image[x][y] != oC) return; //超出
 
-        image[x][y] = newColor; //填顏色
+        image[x][y] = newColor; /
 
         //擴散
         fill(x - 1, y);
