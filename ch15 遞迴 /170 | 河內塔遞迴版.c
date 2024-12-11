@@ -1,5 +1,5 @@
 /* #include <stdio.h> */
-
+// 記得ACB 、 BAC
 void hnr(int n, char A, char B, char C) {
     if (n == 1) {
         printf("盤子從%c移到%c\n", A, C);
