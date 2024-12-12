@@ -1,11 +1,13 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
+
 
 struct ListNode
 {
     int val;
     struct ListNode *next;
 };
+*/
 
 struct ListNode* oddEvenList(struct ListNode* head)
 {
@@ -28,6 +30,7 @@ struct ListNode* oddEvenList(struct ListNode* head)
     return head;
 }
 
+/*
 void Construct(struct ListNode* node, int length, int num)
 {
     int a;
@@ -66,3 +69,4 @@ int main()
     }
     return 0;
 }
+*/
