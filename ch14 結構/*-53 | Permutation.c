@@ -1,79 +1,54 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-// 比較函數，用於 qsort，升序排列
-int compare(const void *a, const void *b) {
-    return (*(int *)a - *(int *)b);
+void ptPer(int N, int result[]) { //印出來
+    for (int i = 0; i < N; i++) {
+        if (i == 0) printf("%d", result[i]);
+        else printf(" %d", result[i]);
+    }
+    printf("\n");
 }
 
-// 交換兩個數字的函數
-void swap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-// 反轉陣列的一部分
-void reverse(int *arr, int start, int end) {
-    while (start < end) {
-        swap(&arr[start], &arr[end]);
-        start++;
-        end--;
-    }
-}
-
-// 生成下個排列組合的函數
-int next(int *arr, int n) {
-    int i = n - 2;
-
-    // 找到一個數字 arr[i] 小於 arr[i + 1]
-    while (i >= 0 && arr[i] >= arr[i + 1]) {
-        i--;
+// 全排列
+// idx // N 有幾個要排列 // num[]提供排列的原始數列 //used[]用來標記num[]有沒有被使用過 //result[]存放排列結果
+void permute(int idx, int N, int num[], int used[], int result[]) {
+    // 如果已選擇了 N 個數字，印出
+    if (idx == N) {
+        ptPer(N, result);
+        return;
     }
 
-    // 如果 i < 0，表示已經是最後一個排列
-    if (i < 0) return 0;
-
-    int j = n - 1;
-
-    // 找到一個數字 arr[j] 大於 arr[i]
-    while (arr[j] <= arr[i]) {
-        j--;
+    // 背起來
+    for (int i = 0; i < N; i++) {
+        if (!used[i]) {
+            used[i] = 1;
+            result[idx] = num[i];
+            permute(idx + 1, N, num, used, result);
+            used[i] = 0;
+        }
     }
-
-    // 交換 arr[i] 和 arr[j]
-    swap(&arr[i], &arr[j]);
-
-    // 反轉 arr[i + 1] 到 arr[n - 1] 之間的部分
-    reverse(arr, i + 1, n - 1);
-    return 1;
 }
 
 int main() {
-    int N, arr[100];
-
-    // 讀取數字的個數 N
+    int N;
     scanf("%d", &N);
 
-    // 讀取數字到陣列
+    int num[10] , used[10] = {0} , result[10];
+
     for (int i = 0; i < N; i++) {
-        scanf("%d", &arr[i]);
+        scanf("%d", &num[i]);
     }
-
-    // 對陣列進行排序，確保從最小排列開始
-    qsort(arr, N, sizeof(int), compare);
-
-    // 輸出所有排列
-    do {
-        // 輸出當前排列
-        for (int i = 0; i < N; i++) {
-            printf("%d", arr[i]);
-            if (i != N - 1) {
-                printf(" ");
+    
+    // 氣泡排順序
+    for (int i = 0; i < N-1; i++) {
+        for (int j = 0; j < N-1-i; j++) {
+            if (num[j] > num[j+1]) {
+                int temp = num[j];
+                num[j] = num[j+1];
+                num[j+1] = temp;
             }
         }
-        printf("\n");
-    } while (next(arr, N));
+    }
 
-    return 0;
+    permute(0, N, num, used, result);
+
 }
