@@ -1,3 +1,4 @@
+/* 這個是用分配記憶體的方式 (應該也能定義 data[][] 然後再算) */
 #include <stdio.h>
 #include <stdlib.h>
 
