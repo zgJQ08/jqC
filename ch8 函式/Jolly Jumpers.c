@@ -1,43 +1,30 @@
-/*這題還好，用新的矩陣來判斷*/
-#include <stdio.h>
+//#include <stdio.h>
 
 void Jolly_Jumpers(int Array[], int size) {
-  int Num[size] , Ary[size-1];
-  
-  for(int i= 0 ; i< size-1 ; i++){
-  	Ary[i] =(Array[i+1] - Array[i] > 0)? Array[i+1] - Array[i] : Array[i] - Array[i+1]  ;
-
-  }
-  
-  
-  for(int i= 0 ; i<size-1 ; i++){
-  	Num[i] = i+1 ;
-  }
-  
-  for(int i=0 ; i<size-1 ; i++){
-  	if(Num[i] != -1){
-    	for(int j=0 ; j<size ; j++){
-        	if(Num[i] == Ary[j]){
-            	Num[i] = -1 ;
+    int Ab[size-1]; //可以宣告size-1
+    for(int i=0 ; i<size-1 ; i++){
+        Ab[i] = (Array[i+1] - Array[i]>0)? Array[i+1] - Array[i] : Array[i] - Array[i+1] ;
+    }
+    
+    for(int i=0 ; i<size-2 ; i++){ //記得這邊size-1-1
+        for(int j=0 ; j<size-2-i ; j++){
+            if(Ab[j] > Ab[j+1]){
+                int temp = Ab[j];
+                Ab[j] = Ab[j+1];
+                Ab[j+1] = temp;
             }
         }
     }
-  }
-  
-  int N=0 ;
-  for(int i= 0 ; i<size-1 ; i++){
-  	if(Num[i] != -1){
-    N = 1 ;
-    break;
+    
+    int T = 1 ;
+    for(int i=0 ; i<size-1 ; i++){ 
+        if(Ab[i] != i+1) T=0; //是跟i+1比對
     }
-  }
-  
-  if(N==0) printf("Jolly");
-  else printf("Not jolly");
-  
+    
+    if(T==0) printf("Not jolly");
+    else printf("Jolly");
 }
-
- 
+/**
 int main() {
     int size;
     scanf("%d", &size);
@@ -50,3 +37,4 @@ int main() {
     Jolly_Jumpers(Array, size);
     return 0;
 }
+**/
