@@ -1,4 +1,4 @@
-// 記得ACB、BAC , 用兩個圈圈去想 
+// 記得ACB、BAC , 用兩個盤子去想 
 
 
 /* #include <stdio.h> */
