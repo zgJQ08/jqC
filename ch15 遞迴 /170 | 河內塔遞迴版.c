@@ -1,4 +1,6 @@
-//記得ACB、BAC , 用兩個圈圈去想 
+// 記得ACB、BAC , 用兩個圈圈去想 
+
+
 /* #include <stdio.h> */
 void hnr(int n, char A, char B, char C) {
     if (n == 1) {
