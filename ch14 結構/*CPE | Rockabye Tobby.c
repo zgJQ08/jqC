@@ -17,32 +17,21 @@ int main() {
             scanf("%s %d", Med[i].med, &Med[i].time);
         }
 
-        int count = 0;
-        int times[giveM]; // 紀錄每個藥物的服藥時間進度
+        int next[giveM]; // 設定M1第一次啥時吃
         for (int i = 0; i < giveM; i++) {
-            times[i] = Med[i].time; // 初始化為該藥物的第一服用時間
+            next[i] = Med[i].time;
         }
-
-        // 吃藥
-        while (count < haveM) {
-            int minTime = 1000000;
-            int selected = -1;
-
-            // 下一個吃啥
-            for (int i = 0; i < giveM; i++) {
-                if (times[i] < minTime) {
-                    minTime = times[i];
-                    selected = i;
+        
+//開始吃藥-------------------
+        for (int count = 0; count < haveM; count++) {
+            int idx=0; //假設第一個先吃
+            for (int i = 1; i < giveM; i++) {
+                if (next[i] < next[idx]) {
+                    idx = i; //現在吃啥
                 }
             }
-
-            
-            printf("%d %s\n", times[selected], Med[selected].med);
-
-            // 更新下一個吃藥的時間
-            times[selected] += Med[selected].time;
-            count++;
+            printf("%d %s\n", next[idx], Med[idx].med);
+            next[idx] += Med[idx].time;  //M1下一次啥時吃
         }
     }
-    return 0;
 }
