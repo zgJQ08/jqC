@@ -1,6 +1,10 @@
+//先return不用做的情況、接著定義odd、even指針，保存even指針位置
+//開始串接，確保head有東西，分別連結odd、even，最後用odd連到一開始保存的even串起來
+
+/*
 #include <stdio.h>
 #include <stdlib.h>
-/*
+
 struct ListNode
 {
     int val;
