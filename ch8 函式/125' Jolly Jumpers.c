@@ -1,3 +1,4 @@
+//存處理過的值->排序->照順序比較
 //#include <stdio.h>
 
 void Jolly_Jumpers(int Array[], int size) {
