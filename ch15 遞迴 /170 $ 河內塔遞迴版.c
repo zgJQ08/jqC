@@ -1,6 +1,4 @@
-// 記得ACB、BAC , 用兩個盤子去想 
-
-
+//n == 1 ->印AC // 呼叫n-1 ACB // 印AC //呼叫n-1 BAC
 /* #include <stdio.h> */
 void hnr(int n, char A, char B, char C) {
     if (n == 1) {
