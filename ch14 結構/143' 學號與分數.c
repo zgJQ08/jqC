@@ -1,3 +1,4 @@
+//只要打輸入進去的值就好...
 /*#include<stdio.h>
  
 struct Student{
@@ -14,3 +15,5 @@ int main(){
     return 0;
 }
 */
+
+
