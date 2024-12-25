@@ -13,7 +13,7 @@ void bubble_sort(int data[]) {
     }
     
      for(int i=0; i<5; i++){
-       if(i !=4) printf("%dx", data[i]);
+       if(i !=4) printf("%d ", data[i]);
        else printf("%d",data[i]);
 	}
 }
