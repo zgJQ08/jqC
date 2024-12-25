@@ -1,4 +1,4 @@
-//多記string裡的strcpy :)
+//多記string裡的strcpy(新,舊) :)
 #include <stdio.h>
 #include <string.h>
 
