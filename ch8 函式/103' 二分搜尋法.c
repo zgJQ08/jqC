@@ -1,3 +1,4 @@
+//可以用迴圈直接找 也會過
 //#include <stdio.h>
 
 int binarysearch(int arr[], int size, int target) {
