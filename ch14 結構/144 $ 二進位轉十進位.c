@@ -3,6 +3,7 @@
 #include <stdlib.h>
 */
 
+// head -> val 存的是值 // head -> next 是下個數字 
 int getDecimalValue(struct ListNode* head)
 {
    int result = 0;
