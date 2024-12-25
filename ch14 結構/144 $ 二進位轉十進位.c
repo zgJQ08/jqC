@@ -1,9 +1,10 @@
+// head -> val 存的是值 // head -> next 是下個數字 
+// 跑到head沒東西為止
+
 /*
 #include <stdio.h>
 #include <stdlib.h>
 */
-
-// head -> val 存的是值 // head -> next 是下個數字 
 int getDecimalValue(struct ListNode* head)
 {
    int result = 0;
