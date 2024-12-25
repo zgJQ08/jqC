@@ -1,5 +1,6 @@
-//先return不用做的情況、接著定義odd、even指針，保存even指針位置
+//定義odd、even指針，保存even指針位置
 //開始串接，確保head有東西，分別連結odd、even，最後用odd連到一開始保存的even串起來
+//返回head值
 
 /*
 #include <stdio.h>
@@ -14,7 +15,6 @@ struct ListNode
 struct ListNode* oddEvenList(struct ListNode* head)
 {
   	//head=[1] [2] [3] [4] [5] NULL 
-    if(head == NULL || head->next == NULL) return head ; //奇葩情況
   	struct ListNode *odd = head ; //odd指針 指向[1]
   	struct ListNode *even = head->next ; //even指針 指向[2]
   	struct ListNode *evenHead = even; //保存even指針 [2]的位置
