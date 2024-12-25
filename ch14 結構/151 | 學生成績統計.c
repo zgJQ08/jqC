@@ -1,3 +1,4 @@
+//多記string裡的strcpy :)
 #include <stdio.h>
 #include <string.h>
 
@@ -17,7 +18,7 @@ int main(){
      sum += students[i].score;
      if(students[i].score>Ms){
      	Ms = students[i].score;
-        strcpy(rank, students[i].studentName);  // rank不能直接= 所以要用複製ㄉ 
+        strcpy(rank, students[i].studentName); //只差在這，必須要用strcpy交換名字^^
      }
   }
   
