@@ -5,7 +5,7 @@ bool isHappy(int n) {
     int arr[100];
     int times = 0 ;
     
-    while(1){
+while(1){
         
     int New = 0 ;
     
@@ -30,9 +30,9 @@ bool isHappy(int n) {
     
     n = New ;
     times ++ ;
-    }
-    
 }
+    
+    }
  
 
  
